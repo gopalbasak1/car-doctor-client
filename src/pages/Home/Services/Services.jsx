@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <div className="mt-4">
       <div className="text-center">
-        <h3 className="text-2xl font-bold">Service</h3>
+        <h3 className="text-2xl font-bold text-[#FF3811]">Service</h3>
         <h2 className="text-5xl">Our Service Area</h2>
         <p>
           the majority have suffered alteration in some form, by injected
